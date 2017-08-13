@@ -39,7 +39,7 @@ h3=tf.sigmoid(z3)
 
 """
 declaring the cost function that has to be minimized to obtain the weights.it is the 
-negative sum of the product of y and log of the hypothesis and (1-y) and log of (1-hyp
+negative sum of the product of y and log of the hypothesis and (1-y) and log of (1-hyp)
 """
 cost_func=-tf.reduce_sum(y*tf.log(h3)+(1-y)*tf.log(1-h3),axis=1)
 
