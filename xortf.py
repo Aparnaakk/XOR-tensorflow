@@ -12,16 +12,16 @@ y=tf.placeholder(tf.float64,shape=[4,1],name="y")#declaring a place holder for d
 m=np.shape(x)[0]#number of training examples
 n=np.shape(x)[1]#number of features
 hidden_s = 2 #number of nodes in the hidden layer
-l_r = 0.1#learning rate initialization
+l_r =1#learning rate initialization
 
 """
-We initialize the weights that our model learns first as matrices of random
+We initialize the weights that our model learns first as matrices of random,normalized
 variables  which are then updated by backpropagation. 
 
 generally the dimensions for each weight vector is: (size of current layer+1,size of next layer)
 """
-theta1=tf.cast(tf.Variable(tf.random_uniform([3,hidden_s]),name="theta1"),tf.float64)
-theta2=tf.cast(tf.Variable(tf.random_uniform([hidden_s+1,1]),name="theta2"),tf.float64)
+theta1=tf.cast(tf.Variable(tf.random_normal([3,hidden_s]),name="theta1"),tf.float64)
+theta2=tf.cast(tf.Variable(tf.random_normal([hidden_s+1,1]),name="theta2"),tf.float64)
 
 #conducting forward propagation
 
